@@ -10,4 +10,4 @@ const searchSongs = (query) => fetchJson(`/api/songs/search/${query}`)
 
 const getSong = (id) => fetchJson(`/api/songs/${id}`)
 
-export { getArtists, getSongs, searchSongs};
+export { getArtists, getSongs, searchSongs, getSong }
