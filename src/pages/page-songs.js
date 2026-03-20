@@ -23,6 +23,7 @@ customElements.define(
           //V1
           const songItem = document.createElement("song-item");
           songItem.setAttribute("title", song.title);
+          songItem.setAttribute("song-id", song.id);
           songItem.setAttribute("favorite", isFavorite(song)); 
           songList.append(songItem);
 

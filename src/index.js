@@ -9,6 +9,8 @@ import "./pages/page-player.js";
 import "./pages/page-songs.js";
 import "./pages/page-favorites.js";
 import "./pages/page-search.js";
+import "./pages/page-song.js";
+
 
 const router = () => {
   const main = document.querySelector("main");
@@ -22,6 +24,7 @@ const router = () => {
     main.innerHTML = "<page-artists />";
   else if (hashs[0] == "#favorites") main.innerHTML = "<page-favorites />";
   else if (hashs[0] == "#search") main.innerHTML = "<page-search />";
+  else if (hashs[0] == "#songs" && hashs[1]) main.innerHTML = `<page-song song-id="${hashs[1]}" />`;
 };
 
 window.addEventListener("hashchange", router);

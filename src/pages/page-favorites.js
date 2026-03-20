@@ -16,6 +16,7 @@ customElements.define(
       songs.forEach((song) => {
         const songItemFav = document.createElement("song-item");
         songItemFav.setAttribute("title", song.title);
+        songItemFav.setAttribute("song-id", song.id);
         songItemFav.setAttribute("favorite", true);
         listFavorites.append(songItemFav);
         songItemFav.addEventListener("favorite_click", () => {
